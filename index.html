@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You</title>
+  <style>
+    body {
+      background: #0f0f14;
+      color: #eaeaea;
+      font-family: Georgia, serif;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    h1, p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    button {
+      margin-top: 30px;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      background: #eaeaea;
+      color: #0f0f14;
+    }
+    .grand {
+      font-size: 42px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <h1>Hey. I made something for you.</h1>
+    <button onclick="step2()">Open</button>
+    <button onclick="step2()">Later</button>
+  </div>
+
+  <script>
+    function step2() {
+      document.getElementById("content").innerHTML = `
+        <p>I need you to actually read this.</p>
+        <button onclick="step3()">Okay</button>
+      `;
+    }
+
+    function step3() {
+      document.getElementById("content").innerHTML = `
+        <p>Some people become home without trying.</p>
+        <button onclick="step4()">Keep going</button>
+      `;
+    }
+
+    function step4() {
+      document.getElementById("content").innerHTML = `
+        <p class="grand">
+          You are my person.<br>
+          Not sometimes.<br>
